@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="author" content="binärraum" />
+	<title>Mastermind</title>
+	<link rel="stylesheet" type="text/css" href="style/mastermind.css" />
+	<script type="text/javascript" src="script/mootools.v1.00.js"></script>
+	<script type="text/javascript" src="script/mastermind.js"></script>
+</head>
+
+<body>
+<div id="page">
+<div id="mastermind">
+
+	<div id="stones">
+
+		<span class="blue drags"></span>
+		<span class="cyan drags"></span>
+		<span class="green drags"></span>
+		<span class="yellow drags"></span>
+		<span class="orange drags"></span>
+		<span class="red drags"></span>
+		<span class="magenta drags"></span>
+		<span class="brown drags"></span>
+		
+	</div>
+
+	<div id="playfield">
+	
+		<div id="line7" class="oneline"><span class="drops"></span><span class="drops"></span><span class="drops"></span><span class="drops"></span><div class="solution"><a href="javascript:masterClick()"><span></span><span></span><span></span><span></span></a></div></div>
+		<div id="line6" class="oneline"><span class="drops"></span><span class="drops"></span><span class="drops"></span><span class="drops"></span><div class="solution"><a href="javascript:masterClick()"><span></span><span></span><span></span><span></span></a></div></div>
+		<div id="line5" class="oneline"><span class="drops"></span><span class="drops"></span><span class="drops"></span><span class="drops"></span><div class="solution"><a href="javascript:masterClick()"><span></span><span></span><span></span><span></span></a></div></div>
+		<div id="line4" class="oneline"><span class="drops"></span><span class="drops"></span><span class="drops"></span><span class="drops"></span><div class="solution"><a href="javascript:masterClick()"><span></span><span></span><span></span><span></span></a></div></div>
+		<div id="line3" class="oneline"><span class="drops"></span><span class="drops"></span><span class="drops"></span><span class="drops"></span><div class="solution"><a href="javascript:masterClick()"><span></span><span></span><span></span><span></span></a></div></div>
+		<div id="line2" class="oneline"><span class="drops"></span><span class="drops"></span><span class="drops"></span><span class="drops"></span><div class="solution"><a href="javascript:masterClick()"><span></span><span></span><span></span><span></span></a></div></div>
+		<div id="line1" class="oneline"><span class="drops"></span><span class="drops"></span><span class="drops"></span><span class="drops"></span><div class="solution"><a href="javascript:masterClick()"><span></span><span></span><span></span><span></span></a></div></div>
+		<div id="line0" class="oneline isactive"><span class="drops"></span><span class="drops"></span><span class="drops"></span><span class="drops"></span><div class="solution"><a href="javascript:masterClick()"><span></span><span></span><span></span><span></span></a></div></div>
+
+	</div>
+
+</div>
+</div>
+
+<script type="text/javascript">
+masterClick = function() { 
+	try { masterplay.checkLine() } 
+	catch(e) {} 
+}
+var masterplay = new Masterplay();
+window.onload = function() { masterplay = new Masterplay(); }
+</script>
+
+</body>
+</html>

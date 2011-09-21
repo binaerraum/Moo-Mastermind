@@ -1,0 +1,138 @@
+body {
+    background: #eee;
+}
+
+div#page {
+    position: absolute;
+    background: red;
+    height: 291px;
+    width: 386px;
+    left: 50%;
+    top: 50%;
+    margin-top: -145px;
+    margin-left: -194px;
+}
+
+/* MASTERMIND */
+#mastermind {
+	margin: 0;
+	padding: 0;
+	position: relative;
+	width: 382px;
+	height: 288px;
+	background: white url(../img/raster.gif);
+	border: 2px solid #ccc;
+	border-bottom: 1px solid #ccc;
+}
+
+#mastermind #stones {
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	left: 33px;
+	top: -1px;
+	width: 28px;
+	z-index: 500;
+}
+#mastermind #stones span {
+	margin: 0;
+	padding: 0;
+	margin: 0 0 4px 0;
+	display: block;
+	width: 32px;
+	height: 32px;
+	position: relative;
+	background-position: 0 2px;
+	background-repeat: no-repeat;
+}
+#mastermind #stones img {
+	width: 32px;
+	height: 32px;
+	margin: 0;
+	padding: 0;
+	border: none;
+	position: relative;
+}
+
+#mastermind #playfield {
+	position: absolute;
+	left: 100px;
+	width: 282px;	
+	margin: 0;
+	padding: 0;
+}
+
+#mastermind .oneline {
+	position: relative;
+	margin: 0;
+	padding: 0;
+	padding-left: 25px;
+	width: 257px;
+	height: 35px;
+	margin-bottom: 1px;
+	z-index: 0;
+}
+#mastermind .oneline span {
+	margin-top: 1px;
+}
+* html #mastermind .oneline {
+	margin-top: 0px;
+	width: 253px;
+}
+
+#mastermind .solution {
+	visibility: hidden;
+	position: absolute;
+	left: 172px;
+	width: 100px;	
+}
+#mastermind .solution span {
+	display: block; 
+	width: 22px; 
+	height: 22px;
+	float: left;
+	background: url(../img/solution_blank.gif) center 5px no-repeat;
+	margin: 5px 0 0 0;
+	margin: 0;
+}
+#mastermind .solution .found { background-image: url(../img/solution_black.gif); }
+#mastermind .solution .false { background-image: url(../img/solution_white.gif); }
+
+#mastermind .drops {
+	display: block;
+	float: left;
+	width: 32px;
+	height: 32px;
+	background: url(../img/line_off.gif);
+}
+#mastermind .drophover {
+	background: url(../img/line_on.gif);
+}
+#mastermind .drags {
+	cursor: move;
+	z-index: 50;
+}
+#mastermind .blue,
+#mastermind .blue span    { background: url(../img/stone_blue.png) }
+#mastermind .red,
+#mastermind .red span     { background: url(../img/stone_red.png) }
+#mastermind .yellow,
+#mastermind .yellow span  { background: url(../img/stone_yellow.png) }
+#mastermind .brown,
+#mastermind .brown span   { background: url(../img/stone_brown.png) }
+#mastermind .magenta,
+#mastermind .magenta span { background: url(../img/stone_magenta.png) }
+#mastermind .orange,
+#mastermind .orange span  { background: url(../img/stone_orange.png) }
+#mastermind .green,
+#mastermind .green span   { background: url(../img/stone_green.png) }
+#mastermind .cyan,
+#mastermind .cyan span    { background: url(../img/stone_cyan.png) }
+
+#mastermind .isactive {
+	background-color: #f8f8f8;
+}
+#mastermind .isactive .solution,
+#mastermind .ishistory .solution {
+	visibility: visible;
+}
